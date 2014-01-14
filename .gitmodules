@@ -1,0 +1,3 @@
+[submodule "subModules/Calendar"]
+	path = subModules/Calendar
+	url = git@github.com:vdesmet93/holo-calendar.git

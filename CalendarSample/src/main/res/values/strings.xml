@@ -2,7 +2,12 @@
 <resources>
 
     <string name="app_name">CalendarSample</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+
+    <string name="list_title_simple_single">Simple MonthView</string>
+    <string name="list_title_simple_multi">Simple Multi MonthView</string>
+    <string name="list_title_custom_single">Custom MonthView</string>
+    <string name="list_title_custom_multi">Custom Multi MonthView</string>
+    <string name="pressed_day">Pressed on day:&#160;</string>
+    <string name="changing_selected_day_bold">The selected date will be shown in bold.</string>
 
 </resources>

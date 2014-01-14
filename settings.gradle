@@ -1,2 +1,2 @@
 include ':CalendarSample'
-include ':subModules:Calendar'
+include ':subModules:Calendar:Calendar'

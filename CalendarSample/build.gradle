@@ -22,8 +22,7 @@ android {
     }
     buildTypes {
         release {
-            runProguard true
-            proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+            runProguard false
         }
     }
     productFlavors {
@@ -34,7 +33,7 @@ android {
 }
 
 dependencies {
-	compile 'com.android.support:appcompat-v7:+'
+    compile 'com.android.support:appcompat-v7:+'
 
     compile project(':subModules:Calendar:Calendar')
 

@@ -22,7 +22,6 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         final ListView listView = (ListView) findViewById(R.id.activity_main_listview);
         listView.setAdapter(new ListAdapter(this));
         listView.setOnItemClickListener(this);
-
     }
 
     @Override

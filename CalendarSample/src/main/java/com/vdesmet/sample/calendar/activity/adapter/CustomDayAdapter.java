@@ -11,14 +11,10 @@ import java.util.Random;
 
 public class CustomDayAdapter implements DayAdapter {
     private static final int[][] CATEGORY_COLORS = {
-            null, null,
+            null, null, null,
             { Color.BLUE },
             { Color.RED },
-            { Color.CYAN },
             { Color.GREEN, Color.RED },
-            { Color.BLACK, Color.RED },
-            { Color.GREEN, Color.CYAN, Color.BLUE },
-            { Color.CYAN, Color.GREEN, Color.RED, Color.BLUE },
             { Color.CYAN, Color.GREEN, Color.RED, Color.BLUE, Color.BLACK }
     };
 
@@ -70,7 +66,7 @@ public class CustomDayAdapter implements DayAdapter {
                 header.setTextColor(Color.RED);
                 break;
 
-            case Calendar.MONDAY:
+            default:
                 header.setTextColor(Color.BLUE);
                 break;
         }

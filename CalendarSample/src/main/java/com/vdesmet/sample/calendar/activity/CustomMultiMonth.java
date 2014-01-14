@@ -42,7 +42,6 @@ public class CustomMultiMonth extends ActionBarActivity implements OnDayClickLis
     @Override
     public void onDayClick(final long dayInMillis) {
 
-        Toast.makeText(this, getString(R.string.changing_selected_day_bold), Toast.LENGTH_SHORT).show();
-
+        Toast.makeText(this, getString(R.string.pressed_day) + dayInMillis, Toast.LENGTH_SHORT).show();
     }
 }

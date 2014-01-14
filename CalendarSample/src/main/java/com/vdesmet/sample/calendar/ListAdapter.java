@@ -51,7 +51,6 @@ public class ListAdapter extends BaseAdapter {
         final TextView textView = (TextView) contentView.findViewById(R.id.main_list_item_title);
         textView.setText(getTitleForPosition(position));
 
-
         return contentView;
     }
 

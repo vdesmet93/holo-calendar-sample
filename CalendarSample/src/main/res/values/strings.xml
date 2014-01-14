@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CalendarSample</string>
+    <string name="app_name">Holo Calendar Sample</string>
 
     <string name="list_title_simple_single">Simple MonthView</string>
     <string name="list_title_simple_multi">Simple Multi MonthView</string>
     <string name="list_title_custom_single">Custom MonthView</string>
     <string name="list_title_custom_multi">Custom Multi MonthView</string>
     <string name="pressed_day">Pressed on day:&#160;</string>
-    <string name="changing_selected_day_bold">The selected date will be shown in bold.</string>
 
 </resources>

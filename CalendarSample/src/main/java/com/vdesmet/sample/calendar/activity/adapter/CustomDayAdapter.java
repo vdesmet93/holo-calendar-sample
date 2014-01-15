@@ -1,7 +1,6 @@
 package com.vdesmet.sample.calendar.activity.adapter;
 
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.widget.TextView;
 
 import com.vdesmet.lib.calendar.DayAdapter;
@@ -53,7 +52,7 @@ public class CustomDayAdapter implements DayAdapter {
     public void updateTextView(final TextView dateTextView, final long dayInMillis) {
         if(mToday == dayInMillis) {
             // Do something with the selected date
-            dateTextView.setTypeface(Typeface.DEFAULT_BOLD);
+            dateTextView.setTextColor(Color.RED);
         }
         // else, we don't need to update the TextView
     }

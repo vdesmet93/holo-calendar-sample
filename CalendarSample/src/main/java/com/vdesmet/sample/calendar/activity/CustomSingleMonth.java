@@ -1,8 +1,9 @@
 package com.vdesmet.sample.calendar.activity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.vdesmet.lib.calendar.CalendarView;
 import com.vdesmet.lib.calendar.OnDayClickListener;
@@ -12,6 +13,10 @@ import com.vdesmet.sample.calendar.activity.adapter.CustomDayAdapter;
 import java.util.Calendar;
 
 public class CustomSingleMonth extends ActionBarActivity implements OnDayClickListener {
+    private CalendarView mSingleMonth;
+
+    private TextView mSelectedTextView;
+    private Typeface mSelectedTypeface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,24 +24,36 @@ public class CustomSingleMonth extends ActionBarActivity implements OnDayClickLi
         setContentView(R.layout.activity_single);
 
         // Retrieve the CalendarView
-        final CalendarView singleMonth = (CalendarView) findViewById(R.id.single_calendar);
+        mSingleMonth = (CalendarView) findViewById(R.id.single_calendar);
 
         // Set the first valid day
         final Calendar firstValidDay = Calendar.getInstance();
         firstValidDay.set(Calendar.DAY_OF_MONTH, 1);
-        singleMonth.setFirstValidDay(firstValidDay);
+        mSingleMonth.setFirstValidDay(firstValidDay);
 
         // Create adapter
         final CustomDayAdapter adapter = new CustomDayAdapter();
 
         // Set listener and adapter
-        singleMonth.setOnDayClickListener(this);
-        singleMonth.setDayAdapter(adapter);
+        mSingleMonth.setOnDayClickListener(this);
+        mSingleMonth.setDayAdapter(adapter);
     }
-
     @Override
     public void onDayClick(final long dayInMillis) {
+        // Reset the previously selected TextView to his previous Typeface
+        if(mSelectedTextView != null) {
+            mSelectedTextView.setTypeface(mSelectedTypeface);
+        }
 
-        Toast.makeText(this, getString(R.string.pressed_day) + dayInMillis, Toast.LENGTH_SHORT).show();
+        final TextView day = mSingleMonth.getTextViewForDate(dayInMillis);
+        if(day != null) {
+            // Remember the selected TextView and it's font
+            mSelectedTypeface = day.getTypeface();
+            mSelectedTextView = day;
+
+            // Show the selected TextView as bold
+            day.setTypeface(Typeface.DEFAULT_BOLD);
+        }
     }
+
 }

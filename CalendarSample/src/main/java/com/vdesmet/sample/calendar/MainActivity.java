@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.vdesmet.sample.calendar.activity.CustomMultiMonth;
 import com.vdesmet.sample.calendar.activity.CustomSingleMonth;
+import com.vdesmet.sample.calendar.activity.FlatMultiMonth;
 import com.vdesmet.sample.calendar.activity.SimpleMultiMonth;
 import com.vdesmet.sample.calendar.activity.SimpleSingleMonth;
 
@@ -41,6 +42,10 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
             case ListAdapter.POS_CUSTOM_MULTI:
                 startActivity(new Intent(this, CustomMultiMonth.class));
+                break;
+
+            case ListAdapter.POS_FLAT_MULTI:
+                startActivity(new Intent(this, FlatMultiMonth.class));
                 break;
         }
     }

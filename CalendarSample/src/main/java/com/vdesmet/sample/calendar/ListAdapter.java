@@ -11,11 +11,12 @@ import java.util.InputMismatchException;
 
 public class ListAdapter extends BaseAdapter {
 
-    public static final int POS_COUNT = 4;
+    public static final int POS_COUNT = 5;
     public static final int POS_SIMPLE_SINGLE = 0;
     public static final int POS_SIMPLE_MULTI = 1;
     public static final int POS_CUSTOM_SINGLE = 2;
     public static final int POS_CUSTOM_MULTI = 3;
+    public static final int POS_FLAT_MULTI = 4;
 
     private final LayoutInflater mInflater;
 
@@ -67,6 +68,9 @@ public class ListAdapter extends BaseAdapter {
 
             case POS_CUSTOM_MULTI:
                 return R.string.list_title_custom_multi;
+
+            case POS_FLAT_MULTI:
+                return R.string.list_title_flat_multi;
 
             default:
                 throw new InputMismatchException("Invalid position. No known title");

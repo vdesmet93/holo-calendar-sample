@@ -3,7 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <!-- Set width to 300dp on smaller devices, increase to 350dp for devices with a width >= 350dp -->
-    <dimen name="calendar_width">300dp</dimen>
 
 </resources>

@@ -9,5 +9,6 @@
     <string name="list_title_custom_multi">Custom Multi MonthView</string>
     <string name="pressed_day">Pressed on day:&#160;</string>
     <string name="selected_day_bold">The selected date will be shown in bold.</string>
+    <string name="list_title_flat_multi">Flat multi month</string>
 
 </resources>

@@ -27,6 +27,7 @@
         <activity android:name=".activity.SimpleMultiMonth" />
         <activity android:name=".activity.CustomSingleMonth" />
         <activity android:name=".activity.CustomMultiMonth" />
+        <activity android:name=".activity.FlatMultiMonth" />
     </application>
 
 </manifest>

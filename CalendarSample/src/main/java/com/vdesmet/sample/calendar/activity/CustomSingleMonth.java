@@ -38,6 +38,7 @@ public class CustomSingleMonth extends ActionBarActivity implements OnDayClickLi
         mSingleMonth.setOnDayClickListener(this);
         mSingleMonth.setDayAdapter(adapter);
     }
+
     @Override
     public void onDayClick(final long dayInMillis) {
         // Reset the previously selected TextView to his previous Typeface
@@ -55,5 +56,4 @@ public class CustomSingleMonth extends ActionBarActivity implements OnDayClickLi
             day.setTypeface(Typeface.DEFAULT_BOLD);
         }
     }
-
 }
